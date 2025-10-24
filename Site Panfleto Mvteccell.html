@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#123a5c" />
+  <title>MVTECCELL | Assistência & Informática</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#ffbe2e;
+      --dark:#0b2b48;
+      --muted:#6b7b8a;
+      --card:#ffffffcc;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Arial,Helvetica;color:#0f1724;margin:0;background:linear-gradient(180deg,#f4f7fb 0%, #e9f0fb 100%);-webkit-font-smoothing:antialiased}
+
+    .wrap{max-width:1100px;margin:28px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .brand{font-weight:800;font-size:20px;color:var(--dark)}
+    .logo .tag{font-size:12px;color:var(--muted)}
+
+    .card{display:grid;grid-template-columns:1fr 1fr;gap:22px;background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(11,43,72,0.08);align-items:center}
+
+    .flyer{display:block;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,0.12);height:100%}
+    .flyer img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(.2,.9,.2,1),filter 0.35s}
+    .flyer:hover img{transform:scale(1.04);filter:brightness(1.03)}
+
+    .info{padding:8px}
+    .eyebrow{color:var(--muted);font-weight:600;font-size:13px}
+    h1{margin:6px 0 10px;font-size:28px;color:var(--dark);line-height:1.05}
+    p.lead{color:#253343;margin:8px 0 18px;line-height:1.45}
+
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));padding:10px;border-radius:10px;font-size:14px;color:#0a2233;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.6)}
+
+    .contact{display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px;text-align:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:600;border:0;cursor:pointer;transition:all 0.28s cubic-bezier(.2,.9,.2,1)}
+    .btn-primary{background:linear-gradient(90deg,var(--dark),#123a5c);color:white;box-shadow:0 8px 18px rgba(11,43,72,0.12)}
+    .btn-primary:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(11,43,72,0.25)}
+    .btn-outline{background:transparent;border:2px solid rgba(11,43,72,0.08);color:var(--dark)}
+    .btn-outline:hover{background:rgba(11,43,72,0.04);transform:translateY(-2px)}
+
+    .whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;background:#25D366;color:white;border-radius:12px;font-weight:700;font-size:14px;white-space:nowrap;text-decoration:none}
+    .whatsapp:hover{background:#1ebe5c;transform:translateY(-4px);box-shadow:0 10px 20px rgba(37,211,102,0.25)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:1024px){
+      .wrap{padding:20px}
+      .card{padding:18px}
+      h1{font-size:24px}
+    }
+
+    @media (max-width:720px){
+      .wrap{margin:12px auto;padding:16px}
+      .card{grid-template-columns:1fr;gap:14px;padding:14px}
+      .flyer{height:320px}
+      h1{font-size:20px}
+      .features{grid-template-columns:repeat(1,1fr)}
+      .contact{flex-direction:column;gap:10px}
+      .whatsapp, .btn, .btn-outline{width:100%;justify-content:center}
+      .whatsapp{font-size:13px;padding:10px;border-radius:10px}
+      .btn{padding:12px;border-radius:10px}
+      footer{font-size:12px}
+    }
+
+    @media (max-width:420px){
+      .flyer{height:260px}
+      .logo .brand{font-size:18px}
+      .logo .tag{font-size:11px}
+      h1{font-size:18px}
+      .whatsapp{font-size:12px;padding:10px}
+    }
+
+    .corner-badge{position:absolute;right:18px;top:18px;background:var(--accent);color:#062034;padding:8px 12px;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(11,43,72,0.08)}
+    .hero-area{position:relative}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#123a5c"/><path d="M6 12h12M12 6v12" stroke="#ffbe2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <div class="brand">MVTECCELL</div>
+          <div class="tag">Assistência Técnica • Informática</div>
+        </div>
+      </div>
+      <div style="margin-left:auto;text-align:right">
+        <div style="font-weight:700;color:var(--dark)">Atendimento rápido</div>
+        <div style="color:var(--muted);font-size:13px">Seg — Sex: 9h — 18h</div>
+      </div>
+    </header>
+
+    <main class="card" role="main">
+      <div class="hero-area">
+        <figure class="flyer">
+          <img loading="lazy" src="Panfleto MVTECCELL-INFOR.jpg" alt="Panfleto MVTECCELL Assistência Celular e Informática">
+        </figure>
+        <div class="corner-badge">Orçamento Grátis</div>
+      </div>
+
+      <div class="info">
+        <div class="eyebrow">Serviços</div>
+        <h1>Troca de telas, baterias, manutenção e formatação</h1>
+        <p class="lead">Oferecemos conserto de celulares e assistência em informática com atendimento profissional. Montagem, redes, sistemas comerciais e contratos de manutenção.</p>
+
+        <div class="features">
+          <div class="feature">Troca de tela</div>
+          <div class="feature">Troca de bateria</div>
+          <div class="feature">Formatação e software</div>
+          <div class="feature">Redes e montagem</div>
+        </div>
+
+        <div class="contact">
+          <a class="whatsapp" href="https://wa.me/55819895298635" target="_blank" rel="noopener">📱 (81) 98529-8635</a>
+          <button class="btn btn-primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Agende um orçamento</button>
+          <a class="btn btn-outline" href="#" download="Panfleto-MVTECCELL.jpg">Baixar panfleto</a>
+        </div>
+        <footer>Para mais informações, entre em contato pelo WhatsApp</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+<!--<footer>Endereço: Informe seu endereço aqui • E-mail: contato@mvteccell.com</footer>
